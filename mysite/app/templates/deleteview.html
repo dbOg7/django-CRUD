@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<h4>Etes-vous sur de vouloir supprimer définitivement {{person.name}} {{person.first_name}} ?</h4>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="supprimer">
+</form>
+{% endblock %}
